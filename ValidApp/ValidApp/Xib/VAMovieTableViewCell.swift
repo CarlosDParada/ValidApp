@@ -54,6 +54,7 @@ class VAMovieTableViewCell: UITableViewCell {
                     let JSONResult = result as! NSDictionary
                     self.movieModel = MovieModel_Base.init(dictionary:  JSONResult)
                     self.completeCell(MovieModel_Base: self.movieModel!)
+                   // self.downloadImage(movieCell: self.movieModel!)
                 }
         }
 
@@ -63,6 +64,18 @@ class VAMovieTableViewCell: UITableViewCell {
     func completeCell(MovieModel_Base movie : MovieModel_Base )  {
         nameMovie.text = movie.original_title
         genMovie.text = movie.release_date
+        self.downloadImage(movieCell: self.movieModel!)
+    }
+    func downloadImage (movieCell movie : MovieModel_Base ){
         
+        let linkImage = movie.backdrop_path
+        let uRLStringImage = "\(VAConstants.Webservice.PathImage)\(linkImage!)"
+        
+        Alamofire.download(uRLStringImage).responseData { response in
+            if let data = response.result.value {
+                let image = UIImage(data: data)
+                self.imageMovie.image = image
+            }
+        }
     }
 }
