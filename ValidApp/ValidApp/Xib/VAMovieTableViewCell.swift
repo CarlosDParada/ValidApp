@@ -68,8 +68,8 @@ class VAMovieTableViewCell: UITableViewCell {
     }
     func downloadImage (movieCell movie : MovieModel_Base ){
         
-        let linkImage = movie.backdrop_path
-        let uRLStringImage = "\(VAConstants.Webservice.PathImage)\(linkImage!)"
+        let linkImage = String ( describing: movie.backdrop_path)
+        let uRLStringImage = "\(VAConstants.Webservice.PathImage)\( linkImage ))"
         
         Alamofire.download(uRLStringImage).responseData { response in
             if let data = response.result.value {
