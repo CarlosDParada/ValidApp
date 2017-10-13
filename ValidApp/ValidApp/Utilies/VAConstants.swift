@@ -31,7 +31,7 @@ public struct VAConstants {
         public static var pageappend_to_response_title = "pageappend_to_response"
         public static var pageappend_to_response = "1"
         
-        public static var PathImage = "https://image.tmdb.org/t/p/w300/"
+        public static var PathImage = "https://image.tmdb.org/t/p/w300"
         // w300 is Width 300px
     }
     

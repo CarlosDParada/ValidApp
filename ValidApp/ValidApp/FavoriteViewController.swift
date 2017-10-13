@@ -17,7 +17,6 @@ class FavoriteViewController: UIViewController, UITableViewDelegate , UITableVie
     private var moviesFavorite = [MovieModel_Base]()
 
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Favorite Movies"

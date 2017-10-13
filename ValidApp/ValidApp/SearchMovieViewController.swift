@@ -30,12 +30,11 @@ class SearchMovieViewController: UIViewController,  UITableViewDelegate , UITabl
         let nibNameCell = UINib(nibName : "VAMovieTableViewCell" , bundle : nil)
         listMoviesTableView.register(nibNameCell, forCellReuseIdentifier: "movieCell")
         
-//        self.allMovies =
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+   
     }
 // #MARK: - NumberOfRows
     
@@ -65,7 +64,7 @@ class SearchMovieViewController: UIViewController,  UITableViewDelegate , UITabl
         let uRLString = "\(VAConstants.Webservice.PathSearch)?\(VAConstants.Webservice.api_key_title)=\(VAConstants.Webservice.api_key)&\(VAConstants.Webservice.query_title)=\(textInfield)&\(VAConstants.Webservice.page_title)=\(VAConstants.Webservice.page)"
        
         Alamofire.request(uRLString, method: .get , encoding: JSONEncoding.default).downloadProgress(queue: DispatchQueue.global(qos: .utility)) { progress in
-            print("Progress: \(progress.fractionCompleted)")
+//            print("Progress: \(progress.fractionCompleted)")
             }
             .validate { request, response, data in
                 return .success

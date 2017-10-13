@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import AlamofireImage
 
 class VAMovieTableViewCell: UITableViewCell {
 
@@ -64,17 +65,28 @@ class VAMovieTableViewCell: UITableViewCell {
     func completeCell(MovieModel_Base movie : MovieModel_Base )  {
         nameMovie.text = movie.original_title
         genMovie.text = movie.release_date
+        
+//        let imageView = UIImageView(frame: frame)
+//        let url = URL(string: "https://httpbin.org/image/png")!
+//        imageView.af_setImage(withURL: url)
+//        imageMovie = imageView
+        
         self.downloadImage(movieCell: self.movieModel!)
     }
+    
     func downloadImage (movieCell movie : MovieModel_Base ){
+        if movie.backdrop_path != nil {
+            
+            DataRequest.addAcceptableImageContentTypes(["image/jpg"])
+            let uRLStringImage = "\(VAConstants.Webservice.PathImage)\( movie.backdrop_path! ))"
         
-        let linkImage = String ( describing: movie.backdrop_path)
-        let uRLStringImage = "\(VAConstants.Webservice.PathImage)\( linkImage ))"
-        
-        Alamofire.download(uRLStringImage).responseData { response in
-            if let data = response.result.value {
-                let image = UIImage(data: data)
-                self.imageMovie.image = image
+            Alamofire.request("\(uRLStringImage)").responseImage { response in
+                debugPrint(response)
+                
+                if let image = response.result.value {
+                    self.imageMovie.image = image
+                    print("image downloaded: \(image)")
+                }
             }
         }
     }
