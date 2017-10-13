@@ -12,7 +12,7 @@ class FavoriteViewController: UIViewController, UITableViewDelegate , UITableVie
 
 
     @IBOutlet weak var nameMoviwField: UITextField!
-    @IBOutlet weak var favoriteMoviesView: UITableView!
+    @IBOutlet weak var favoriteMoviesTable: UITableView!
     
     private var moviesFavorite = [MovieModel_Base]()
     
@@ -20,11 +20,11 @@ class FavoriteViewController: UIViewController, UITableViewDelegate , UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Favorite Movies"
-        favoriteMoviesView.delegate = self
-        favoriteMoviesView.dataSource = self
+        favoriteMoviesTable.delegate = self
+        favoriteMoviesTable.dataSource = self
         
         let nibNameCell = UINib(nibName : "VAMovieTableViewCell" , bundle : nil)
-        favoriteMovies
+        favoriteMoviesTable.register(nibNameCell, forCellReuseIdentifier: "movieCell")
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,9 +37,17 @@ class FavoriteViewController: UIViewController, UITableViewDelegate , UITableVie
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath) as! VAMovieTableViewCell
+        let movie : MovieModel_Base = self.moviesFavorite[indexPath.row-1]
+        cell.nameMovie.text = loadDataMovie(id: movie.original_title!)
         
     }
     
+    func loadDataMovie (id idMovie : String) ->  String {
+        
+        
+        
+    }
 
     /*
     // MARK: - Navigation
