@@ -19,7 +19,7 @@ class SearchMovieViewController: UIViewController,  UITableViewDelegate , UITabl
 
     override func viewDidLoad() {
         
-        searchMovieByText(string: "Rose")
+        searchMovieByText(string: "Car")
         
         super.viewDidLoad()
         
@@ -51,18 +51,9 @@ class SearchMovieViewController: UIViewController,  UITableViewDelegate , UITabl
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath) as! VAMovieTableViewCell
-        var idMovie = String (describing: self.allMovies?.results![indexPath.row].id!) as? String
-        let idMovie2 = String(describing: idMovie)
-        print(idMovie2)
-
-          cell.loadDataMovie(id: idMovie)
-    
-//        let movie : MovieModel_Base = loadDataMovie(id: idMovie)
-//
-//
-//       cell.nameMovie.text = movie.original_title
-//
-//
+        let idMovie = String (describing: self.allMovies?.results![indexPath.row].id ?? 0)
+        cell.loadDataMovie(id: idMovie)
+        cell.nameMovie.text = idMovie
         return cell
         
     }
