@@ -62,7 +62,7 @@ public class MovieModel_Base {
         backdrop_path = dictionary["backdrop_path"] as? String
         belongs_to_collection = dictionary["belongs_to_collection"] as? String
         budget = dictionary["budget"] as? Int
-        if (dictionary["genres"] != nil) { genres = Genres.modelsFromDictionaryArray(dictionary["genres"] as! NSArray) }
+        if (dictionary["genres"] != nil) { genres = Genres.modelsFromDictionaryArray(array: dictionary["genres"] as! NSArray) }
         homepage = dictionary["homepage"] as? String
         id = dictionary["id"] as? Int
         imdb_id = dictionary["imdb_id"] as? String
@@ -71,12 +71,12 @@ public class MovieModel_Base {
         overview = dictionary["overview"] as? String
         popularity = dictionary["popularity"] as? Double
         poster_path = dictionary["poster_path"] as? String
-        if (dictionary["production_companies"] != nil) { production_companies = Production_companies.modelsFromDictionaryArray(dictionary["production_companies"] as! NSArray) }
-        if (dictionary["production_countries"] != nil) { production_countries = Production_countries.modelsFromDictionaryArray(dictionary["production_countries"] as! NSArray) }
+        if (dictionary["production_companies"] != nil) { production_companies = Production_companies.modelsFromDictionaryArray(array: dictionary["production_companies"] as! NSArray) }
+        if (dictionary["production_countries"] != nil) { production_countries = Production_countries.modelsFromDictionaryArray(array: dictionary["production_countries"] as! NSArray) }
         release_date = dictionary["release_date"] as? String
         revenue = dictionary["revenue"] as? Int
         runtime = dictionary["runtime"] as? Int
-        if (dictionary["spoken_languages"] != nil) { spoken_languages = Spoken_languages.modelsFromDictionaryArray(dictionary["spoken_languages"] as! NSArray) }
+        if (dictionary["spoken_languages"] != nil) { spoken_languages = Spoken_languages.modelsFromDictionaryArray(array: dictionary["spoken_languages"] as! NSArray) }
         status = dictionary["status"] as? String
         tagline = dictionary["tagline"] as? String
         title = dictionary["title"] as? String
