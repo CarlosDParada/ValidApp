@@ -11,7 +11,7 @@ import Foundation
 public struct VAConstants {
     
     public struct Webservice{
-        public static var PathInit = "https://api.themoviedb.org/3/search/keyword/"
+        public static var PathDetailt = "https://api.themoviedb.org/3/movie/"
         public static var PathSearch = "https://api.themoviedb.org/3/search/keyword"
         
         public static var api_key_title = "api_key"
@@ -35,5 +35,25 @@ public struct VAConstants {
         // w300 is Width 300px
     }
     
-    
+//    public func loadDataMovie (id idMovie : String) ->  MovieModel_Base {
+//        
+//        // var moviesSelect1 : MovieModel_Base?
+//        let uRLString = "\(VAConstants.Webservice.PathDetailt)\(idMovie)?\(VAConstants.Webservice.api_key_title)=\(VAConstants.Webservice.api_key)&\(VAConstants.Webservice.lenguaje_title)=\(VAConstants.Webservice.lenguaje)&\(VAConstants.Webservice.pageappend_to_response_title)=\(VAConstants.Webservice.pageappend_to_response)"
+//        
+//        Alamofire.request(uRLString, method: .get , encoding: JSONEncoding.default).downloadProgress(queue: DispatchQueue.global(qos: .utility)) { progress in
+//            print("Progress: \(progress.fractionCompleted)")
+//            }
+//            .validate { request, response, data in
+//                return .success
+//            }
+//            .responseJSON { response in
+//                
+//                if let result = response.result.value {
+//                    let JSONResult = result as! NSDictionary
+//                    self.moviesSelect = MovieModel_Base.init(dictionary:  JSONResult)
+//                    self.listMoviesTableView.reloadData()
+//                }
+//        }
+//        return self.moviesSelect!
+//    }
 }

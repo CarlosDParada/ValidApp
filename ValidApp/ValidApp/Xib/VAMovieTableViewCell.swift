@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class VAMovieTableViewCell: UITableViewCell {
 
@@ -14,6 +15,7 @@ class VAMovieTableViewCell: UITableViewCell {
     @IBOutlet weak var nameMovie: UILabel!
     @IBOutlet weak var genMovie: UILabel!
     
+    var movieModel : MovieModel_Base? = nil
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,7 +28,8 @@ class VAMovieTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func commonInit(_ imageName: String ,_ nameTheMovie : String ,_ genreMovie : String ){
+    func commonInit(_ imageName: String ,_ nameTheMovie : String ,_ genreMovie : String , _ idMovie : String){
+        
         
         imageMovie.image = UIImage(named : imageName)
         nameMovie.text = nameTheMovie
@@ -34,4 +37,32 @@ class VAMovieTableViewCell: UITableViewCell {
         
     }
     
+    func loadDataMovie (id idMovie : String) {
+        
+        // var moviesSelect1 : MovieModel_Base?
+        let uRLString = "\(VAConstants.Webservice.PathDetailt)\(idMovie)?\(VAConstants.Webservice.api_key_title)=\(VAConstants.Webservice.api_key)&\(VAConstants.Webservice.lenguaje_title)=\(VAConstants.Webservice.lenguaje)&\(VAConstants.Webservice.pageappend_to_response_title)=\(VAConstants.Webservice.pageappend_to_response)"
+        
+        Alamofire.request(uRLString, method: .get , encoding: JSONEncoding.default).downloadProgress(queue: DispatchQueue.global(qos: .utility)) { progress in
+            print("Progress: \(progress.fractionCompleted)")
+            }
+            .validate { request, response, data in
+                return .success
+            }
+            .responseJSON { response in
+                
+                if let result = response.result.value {
+                    let JSONResult = result as! NSDictionary
+                    self.movieModel = MovieModel_Base.init(dictionary:  JSONResult)
+                    self.completeCell(MovieModel_Base: self.movieModel!)
+                }
+        }
+
+        
+    }
+    
+    func completeCell(MovieModel_Base movie : MovieModel_Base )  {
+        nameMovie.text = movie.original_title
+        genMovie.text = movie.release_date
+        
+    }
 }
