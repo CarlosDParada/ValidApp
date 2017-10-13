@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,14 +23,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="o3H-Bl-eOa">
-                                <rect key="frame" x="0.0" y="-141" width="375" height="808"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="o3H-Bl-eOa">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="647" id="XBT-41-Khp"/>
+                                    <constraint firstAttribute="width" constant="375" id="kLz-O5-KRQ"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qD2-I1-lfJ">
-                                <rect key="frame" x="21" y="61" width="332" height="184"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fl4-nL-xum">
+                                <rect key="frame" x="21" y="352" width="332" height="207"/>
+                                <color key="backgroundColor" red="0.72773710849746787" green="0.72773710849746787" blue="0.72773710849746787" alpha="0.42509825536809814" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="207" id="8Wf-Np-ccK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="37"/>
+                                <state key="normal" title="Favorite">
+                                    <color key="titleColor" red="0.30944443618587225" green="0.043768739790977847" blue="0.0021266563719984635" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.98353677703467857" green="0.13911436185277007" blue="0.0067593548611074548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cm0-cR-s0x" kind="presentation" id="gec-9G-YHE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qD2-I1-lfJ">
+                                <rect key="frame" x="22" y="120" width="332" height="184"/>
                                 <color key="backgroundColor" red="0.71038688500000002" green="0.71038688500000002" blue="0.71038688500000002" alpha="0.53043519938650308" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="332" id="1J7-ej-Axm"/>
+                                    <constraint firstAttribute="height" constant="184" id="D4f-HS-be2"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="41"/>
                                 <state key="normal" title="Search">
                                     <color key="titleColor" red="0.0" green="0.16862745100000001" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -39,18 +61,42 @@
                                     <segue destination="bDC-4n-vbS" kind="show" id="4ei-Iy-U69"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fl4-nL-xum">
-                                <rect key="frame" x="21" y="352" width="332" height="207"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.72773710849746787" green="0.72773710849746787" blue="0.72773710849746787" alpha="0.42509825536809814" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="37"/>
-                                <state key="normal" title="Favorite"/>
-                                <connections>
-                                    <segue destination="cm0-cR-s0x" kind="presentation" id="gec-9G-YHE"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="o3H-Bl-eOa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0pG-cz-oYK"/>
+                            <constraint firstItem="o3H-Bl-eOa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="1NW-OD-Jwn"/>
+                            <constraint firstItem="Fl4-nL-xum" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="21" id="238-65-Kg2"/>
+                            <constraint firstItem="o3H-Bl-eOa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="2RS-92-OwB"/>
+                            <constraint firstItem="o3H-Bl-eOa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4os-6Q-0f2"/>
+                            <constraint firstItem="o3H-Bl-eOa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8cv-UY-AlD"/>
+                            <constraint firstItem="Fl4-nL-xum" firstAttribute="top" secondItem="qD2-I1-lfJ" secondAttribute="bottom" constant="48" id="9Mp-hs-xL4"/>
+                            <constraint firstItem="qD2-I1-lfJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="9PA-h4-dQL"/>
+                            <constraint firstItem="o3H-Bl-eOa" firstAttribute="top" secondItem="qD2-I1-lfJ" secondAttribute="bottom" constant="-284" id="BHg-63-A00"/>
+                            <constraint firstItem="Fl4-nL-xum" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="21" id="Bdo-Wi-35L"/>
+                            <constraint firstItem="Fl4-nL-xum" firstAttribute="centerX" secondItem="o3H-Bl-eOa" secondAttribute="centerX" id="EhY-Sx-dCk"/>
+                            <constraint firstItem="o3H-Bl-eOa" firstAttribute="centerX" secondItem="Fl4-nL-xum" secondAttribute="centerX" id="KHS-fE-lpX"/>
+                            <constraint firstItem="o3H-Bl-eOa" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="KMe-SP-oeU"/>
+                            <constraint firstItem="o3H-Bl-eOa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Kcc-gf-zux"/>
+                            <constraint firstItem="Fl4-nL-xum" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="352" id="PzO-tA-bH9"/>
+                            <constraint firstAttribute="trailing" secondItem="o3H-Bl-eOa" secondAttribute="trailing" id="Xgy-ra-QH1"/>
+                            <constraint firstItem="o3H-Bl-eOa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YVW-CF-jC8"/>
+                            <constraint firstItem="o3H-Bl-eOa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="b5t-6c-avi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fl4-nL-xum" secondAttribute="trailing" constant="22" id="dYR-wR-U4g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Fl4-nL-xum" secondAttribute="bottom" constant="108" id="gTv-Kk-l8t"/>
+                            <constraint firstAttribute="bottom" secondItem="o3H-Bl-eOa" secondAttribute="bottom" id="ino-il-wOk"/>
+                            <constraint firstItem="qD2-I1-lfJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="jKJ-sf-Hvm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qD2-I1-lfJ" secondAttribute="trailing" constant="21" id="kWh-n1-7Nh"/>
+                            <constraint firstItem="o3H-Bl-eOa" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottomMargin" id="kra-n8-uoF"/>
+                            <constraint firstItem="o3H-Bl-eOa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mir-ld-fJD"/>
+                            <constraint firstItem="o3H-Bl-eOa" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="oGF-c8-ZsA"/>
+                            <constraint firstItem="qD2-I1-lfJ" firstAttribute="leading" secondItem="o3H-Bl-eOa" secondAttribute="trailing" constant="-353" id="obl-6C-ACQ"/>
+                            <constraint firstItem="Fl4-nL-xum" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="21" id="rGx-bT-fwQ"/>
+                            <constraint firstAttribute="bottom" secondItem="Fl4-nL-xum" secondAttribute="bottom" constant="108" id="snt-cz-vQb"/>
+                            <constraint firstItem="Fl4-nL-xum" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y5V-vl-xDH"/>
+                            <constraint firstItem="o3H-Bl-eOa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ygi-Lj-0RY"/>
+                            <constraint firstItem="o3H-Bl-eOa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zug-Ph-VB5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="cwP-CI-cAr"/>
