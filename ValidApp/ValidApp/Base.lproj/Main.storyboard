@@ -16,13 +16,31 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qD2-I1-lfJ">
+                                <rect key="frame" x="163" y="208" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Search"/>
+                                <connections>
+                                    <segue destination="bDC-4n-vbS" kind="presentation" id="4ei-Iy-U69"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fl4-nL-xum">
+                                <rect key="frame" x="160" y="384" width="55" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Favorite"/>
+                                <connections>
+                                    <segue destination="cm0-cR-s0x" kind="presentation" id="gec-9G-YHE"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="170" y="-25"/>
+            <point key="canvasLocation" x="94" y="-36"/>
         </scene>
         <!--Search Movie View Controller-->
         <scene sceneID="YEA-E8-bgI">
@@ -71,7 +89,7 @@
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="listMoviesView" destination="M8s-Ye-FJL" id="bFb-b2-EYX"/>
+                        <outlet property="listMoviesTableView" destination="M8s-Ye-FJL" id="bFb-b2-EYX"/>
                         <outlet property="searchMovieField" destination="tfR-UX-1VY" id="l94-da-Faq"/>
                     </connections>
                 </viewController>
@@ -121,7 +139,7 @@
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="favoriteMoviesView" destination="EnC-wJ-MXU" id="5GI-ra-v3a"/>
+                        <outlet property="favoriteMoviesTable" destination="EnC-wJ-MXU" id="jmZ-2s-GGM"/>
                         <outlet property="nameMoviwField" destination="zfs-u2-K1z" id="9cj-4w-mn3"/>
                     </connections>
                 </viewController>

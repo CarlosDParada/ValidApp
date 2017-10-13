@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA15531B12536F63BA625CF3 /* Pods_ValidApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF3FD06A08B478317D0E722 /* Pods_ValidApp.framework */; };
 		D931B9E81F903ADB00D132AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D931B9E71F903ADB00D132AB /* AppDelegate.swift */; };
 		D931B9EA1F903ADB00D132AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D931B9E91F903ADB00D132AB /* ViewController.swift */; };
 		D931B9ED1F903ADB00D132AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D931B9EB1F903ADB00D132AB /* Main.storyboard */; };
@@ -23,9 +24,26 @@
 		D931BA0F1F9049D800D132AB /* SearchMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D931BA0E1F9049D800D132AB /* SearchMovieViewController.swift */; };
 		D931BA151F904F1E00D132AB /* VAMovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D931BA131F904F1E00D132AB /* VAMovieTableViewCell.swift */; };
 		D931BA161F904F1E00D132AB /* VAMovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D931BA141F904F1E00D132AB /* VAMovieTableViewCell.xib */; };
+		D976DDE71F905D6A00FD36BF /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D976DDE61F905D6A00FD36BF /* SearchModel.swift */; };
+		D976DDE91F905D9F00FD36BF /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = D976DDE81F905D9F00FD36BF /* Results.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D976DDE51F905C8B00FD36BF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0EF3FD06A08B478317D0E722 /* Pods_ValidApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ValidApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9429075444DD5B911F82263 /* Pods-ValidApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ValidApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ValidApp/Pods-ValidApp.release.xcconfig"; sourceTree = "<group>"; };
 		D931B9E41F903ADB00D132AB /* ValidApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ValidApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D931B9E71F903ADB00D132AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D931B9E91F903ADB00D132AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +63,9 @@
 		D931BA121F904B6000D132AB /* LagDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LagDetailCell.xib; sourceTree = "<group>"; };
 		D931BA131F904F1E00D132AB /* VAMovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAMovieTableViewCell.swift; sourceTree = "<group>"; };
 		D931BA141F904F1E00D132AB /* VAMovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VAMovieTableViewCell.xib; sourceTree = "<group>"; };
+		D976DDE61F905D6A00FD36BF /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
+		D976DDE81F905D9F00FD36BF /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
+		E865793D2B2CEC70FAB50376 /* Pods-ValidApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ValidApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ValidApp/Pods-ValidApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,17 +73,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA15531B12536F63BA625CF3 /* Pods_ValidApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D4871CB3F3AB9629E0BD714 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E865793D2B2CEC70FAB50376 /* Pods-ValidApp.debug.xcconfig */,
+				C9429075444DD5B911F82263 /* Pods-ValidApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		93ECFF072DDBD1A681BD4F30 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0EF3FD06A08B478317D0E722 /* Pods_ValidApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D931B9DB1F903ADB00D132AB = {
 			isa = PBXGroup;
 			children = (
 				D931B9E61F903ADB00D132AB /* ValidApp */,
 				D931B9E51F903ADB00D132AB /* Products */,
+				0D4871CB3F3AB9629E0BD714 /* Pods */,
+				93ECFF072DDBD1A681BD4F30 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +142,8 @@
 				D931BA031F90428A00D132AB /* Production_companies.swift */,
 				D931BA051F9042D900D132AB /* Production_countries.swift */,
 				D931BA071F9043C500D132AB /* Spoken_languages.swift */,
+				D976DDE61F905D6A00FD36BF /* SearchModel.swift */,
+				D976DDE81F905D9F00FD36BF /* Results.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -130,9 +173,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D931B9F91F903ADB00D132AB /* Build configuration list for PBXNativeTarget "ValidApp" */;
 			buildPhases = (
+				D2BC26BECF8E8628B27CD585 /* [CP] Check Pods Manifest.lock */,
 				D931B9E01F903ADB00D132AB /* Sources */,
 				D931B9E11F903ADB00D132AB /* Frameworks */,
 				D931B9E21F903ADB00D132AB /* Resources */,
+				D976DDE51F905C8B00FD36BF /* Embed Frameworks */,
+				978C647A9BAF82BFB93B2EBA /* [CP] Embed Pods Frameworks */,
+				4C275C43D0EB101D341B775C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -191,11 +238,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4C275C43D0EB101D341B775C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ValidApp/Pods-ValidApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		978C647A9BAF82BFB93B2EBA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ValidApp/Pods-ValidApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ValidApp/Pods-ValidApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2BC26BECF8E8628B27CD585 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ValidApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D931B9E01F903ADB00D132AB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D976DDE71F905D6A00FD36BF /* SearchModel.swift in Sources */,
 				D931BA061F9042D900D132AB /* Production_countries.swift in Sources */,
 				D931BA0B1F90468B00D132AB /* VAConstants.swift in Sources */,
 				D931B9FE1F90412200D132AB /* MovieModel.swift in Sources */,
@@ -205,6 +307,7 @@
 				D931BA0F1F9049D800D132AB /* SearchMovieViewController.swift in Sources */,
 				D931B9EA1F903ADB00D132AB /* ViewController.swift in Sources */,
 				D931BA041F90428A00D132AB /* Production_companies.swift in Sources */,
+				D976DDE91F905D9F00FD36BF /* Results.swift in Sources */,
 				D931B9E81F903ADB00D132AB /* AppDelegate.swift in Sources */,
 				D931BA081F9043C500D132AB /* Spoken_languages.swift in Sources */,
 				D931BA151F904F1E00D132AB /* VAMovieTableViewCell.swift in Sources */,
@@ -342,7 +445,9 @@
 		};
 		D931B9FA1F903ADB00D132AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E865793D2B2CEC70FAB50376 /* Pods-ValidApp.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8R49A3XR5X;
@@ -357,7 +462,9 @@
 		};
 		D931B9FB1F903ADB00D132AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9429075444DD5B911F82263 /* Pods-ValidApp.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8R49A3XR5X;

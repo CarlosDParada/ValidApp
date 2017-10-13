@@ -15,6 +15,7 @@ class FavoriteViewController: UIViewController, UITableViewDelegate , UITableVie
     @IBOutlet weak var favoriteMoviesTable: UITableView!
     
     private var moviesFavorite = [MovieModel_Base]()
+
     
     
     override func viewDidLoad() {
@@ -40,12 +41,12 @@ class FavoriteViewController: UIViewController, UITableViewDelegate , UITableVie
         let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath) as! VAMovieTableViewCell
         let movie : MovieModel_Base = self.moviesFavorite[indexPath.row-1]
         cell.nameMovie.text = loadDataMovie(id: movie.original_title!)
-        
+        return cell
     }
     
     func loadDataMovie (id idMovie : String) ->  String {
         
-        
+        return "null"
         
     }
 
